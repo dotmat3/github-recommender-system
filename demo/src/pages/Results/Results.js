@@ -9,7 +9,7 @@ import Card from "../../components/Card";
 import Header from "../../components/Header";
 import Pagination from "../../components/Pagination";
 
-import { NGROK_ADDRESS } from "../../constants";
+import { useServer } from "../../context/server-address";
 
 import "./Results.scss";
 
@@ -24,11 +24,13 @@ const Results = () => {
   const [predictions, setPredictions] = useState();
   const [groundTruth, setGroundTruth] = useState();
 
+  const serverAddress = useServer();
+
   useEffect(() => {
     console.log(location.state);
 
     const predict = async () => {
-      const response = await fetch(`${NGROK_ADDRESS}/recommend`, {
+      const response = await fetch(`${serverAddress}/recommend`, {
         method: "POST",
         body: JSON.stringify(location.state),
         headers: { "Content-Type": "application/json" },
@@ -65,7 +67,7 @@ const Results = () => {
         );
       setPredicting(false);
     });
-  }, []);
+  }, [location.state, serverAddress]);
 
   if (predicting)
     return (

@@ -1,5 +1,3 @@
-export const NGROK_ADDRESS = "https://a27f-35-237-124-108.ngrok.io";
-
 export const LANGUAGE_ICONS = {
   JavaScript: "grommet-icons:js",
   TypeScript: "logos:typescript-icon",

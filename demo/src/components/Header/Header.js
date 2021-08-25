@@ -18,7 +18,13 @@ const Header = () => {
           </div>
         </div>
       </Link>
-      <Button variant="green">Project repo</Button>
+      <a
+        href="https://github.com/dotmat3/github-recommender-system"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Button variant="green">Project repo</Button>
+      </a>
     </header>
   );
 };
