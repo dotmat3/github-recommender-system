@@ -1,0 +1,33 @@
+.user-card {
+  width: auto;
+  height: 50px;
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  color: #8b949e;
+  cursor: pointer;
+  border-radius: 6px;
+  text-decoration: none !important;
+
+  &:hover {
+    border-color: #8b949e;
+    background-color: #21262d;
+
+    .card-footer {
+      background-color: #30363d;
+    }
+  }
+
+  h1 {
+    font-size: 1em;
+    font-weight: bold;
+    white-space: nowrap;
+    text-decoration: none !important;
+    color: #58a6ff;
+  }
+
+  h2 {
+    font-size: .8em;
+    white-space: nowrap;
+    text-decoration: none !important;
+  }
+}

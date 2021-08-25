@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #0d1117;
+  color: white;
+}
+
+.form-control,
+.form-select {
+  background-color: #21262d;
+  color: white;
+  border: 1px solid #30363d;
+
+  &:focus {
+    color: white;
+    background-color: #30363d;
+    border: 1px solid #8b949e;
+    box-shadow: 0 0 0 3px rgba(139, 148, 158, 0.3);
+  }
+}
+
+.badge {
+  background-color: #238636;
+}
+
+.btn {
+  border-radius: 6px;
+  padding: 5px 16px;
+  margin: 0 4px;
+}
+
+.btn-green {
+  background-color: #238636;
+  color: white;
+  border: 1px solid #2ea043;
+
+  &:hover {
+    color: white;
+    background-color: #2ea043;
+    border: 1px solid #3fb950;
+  }
+
+  &:focus {
+    background-color: #238636;
+    border: 1px solid #3fb950;
+    box-shadow: 0 0 0 3px rgba(46, 164, 79, 0.4);
+  }
+}
+
+.btn-primary {
+  background-color: #21262d;
+  color: white;
+  border: 1px solid #30363d;
+
+  &:hover {
+    color: white;
+    background-color: #30363d;
+    border: 1px solid #8b949e;
+  }
+
+  &:focus {
+    background-color: #30363d;
+    border: 1px solid #8b949e;
+    box-shadow: 0 0 0 3px rgba(139, 148, 158, 0.3);
+  }
+}
+
+a {
+  color: #58a6ff;
+  text-decoration: none;
+
+  &:hover {
+    color: #58a6ff !important;
+    text-decoration: underline;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #30363d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8b949e;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #58a6ff;
+}
+
+.modal-content {
+  background: #161b22;
+}

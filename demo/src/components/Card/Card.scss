@@ -1,0 +1,35 @@
+.card {
+  max-width: 300px;
+  height: 250px;
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  color: #8b949e;
+  cursor: pointer;
+
+  &.active {
+    border-color: #2EA043;
+    box-shadow: 0 0 0 3px rgba(46, 164, 79, .4);
+  }
+
+  &:hover {
+    border-color: #8b949e;
+    background-color: #21262d;
+
+    .card-footer {
+      background-color: #30363d;
+    }
+  }
+
+  .card-header, .card-footer {
+    background-color: #21262d;
+  }
+
+  .card-body {
+    overflow: hidden;
+
+    .card-text {
+      overflow: hidden;
+    }
+  }
+  
+}
