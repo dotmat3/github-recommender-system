@@ -5,7 +5,7 @@ import Row from "react-bootstrap/Row";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 
-import Card from "../../components/Card";
+import RepoCard from "../../components/RepoCard";
 import Header from "../../components/Header";
 import Pagination from "../../components/Pagination";
 
@@ -86,7 +86,7 @@ const Results = () => {
       <div className="p-2">
         {previouslyStarred && (
           <ResultsSection title="Previously Starred" data={previouslyStarred}>
-            {({ repoId, ...repoInfo }) => <Card key={repoId} {...repoInfo} />}
+            {({ repoId, ...repoInfo }) => <RepoCard key={repoId} {...repoInfo} />}
           </ResultsSection>
         )}
         {predictions && (
@@ -100,7 +100,7 @@ const Results = () => {
                 placement="top"
                 overlay={<Tooltip>Score: {score.toFixed(3)}</Tooltip>}
               >
-                <Card
+                <RepoCard
                   {...repoInfo}
                   active={
                     groundTruth &&
@@ -116,7 +116,7 @@ const Results = () => {
         {groundTruth && (
           <ResultsSection title="Ground Truth" data={groundTruth}>
             {({ repoId, ...repoInfo }) => (
-              <Card
+              <RepoCard
                 key={repoId}
                 {...repoInfo}
                 active={Object.values(predictions).find(

@@ -1,14 +1,14 @@
 import React from "react";
 import classNames from "classnames";
 
-import BootstrapCard from "react-bootstrap/Card";
+import Card from "react-bootstrap/Card";
 import { Icon } from "@iconify/react";
 
 import { MONTHS, LANGUAGE_ICONS } from "../../constants";
 
-import "./Card.scss";
+import "./RepoCard.scss";
 
-const Card = (
+const RepoCard = (
   {
     name,
     creator,
@@ -24,13 +24,9 @@ const Card = (
   ref
 ) => {
   return (
-    <BootstrapCard
-      className={classNames("m-2", { active })}
-      ref={ref}
-      {...props}
-    >
-      <BootstrapCard.Body className="d-flex flex-column">
-        <BootstrapCard.Title>
+    <Card className={classNames("m-2", { active })} ref={ref} {...props}>
+      <Card.Body className="d-flex flex-column">
+        <Card.Title>
           <a
             href={`https://github.com/${creator}/${name}`}
             target="_blank"
@@ -39,10 +35,8 @@ const Card = (
           >
             {creator} / {name}
           </a>
-        </BootstrapCard.Title>
-        <BootstrapCard.Text className="mb-4 flex-grow-1">
-          {about}
-        </BootstrapCard.Text>
+        </Card.Title>
+        <Card.Text className="mb-4 flex-grow-1">{about}</Card.Text>
         <div className="d-flex justify-content-between align-items-center">
           <div className="d-flex justify-content-between align-items-center">
             <Icon icon="ant-design:star-outlined" className="me-2" />
@@ -57,8 +51,8 @@ const Card = (
             {language !== "UNK" ? language : "Unknown"}
           </div>
         </div>
-      </BootstrapCard.Body>
-      <BootstrapCard.Footer
+      </Card.Body>
+      <Card.Footer
         className={classNames("d-flex align-items-center text-center", {
           "justify-content-between": sponsor,
         })}
@@ -79,9 +73,9 @@ const Card = (
             Sponsored
           </div>
         )}
-      </BootstrapCard.Footer>
-    </BootstrapCard>
+      </Card.Footer>
+    </Card>
   );
 };
 
-export default React.forwardRef(Card);
+export default React.forwardRef(RepoCard);

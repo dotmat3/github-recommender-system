@@ -84,10 +84,6 @@ const Settings = ({
           placeholder="Number of recommended repos"
         />
       </Form>
-      <div className="header mt-4 mb-3">
-        <h1>Statistics</h1>
-      </div>
-      <p>...Bunch of statistics...</p>
     </div>
   );
 };

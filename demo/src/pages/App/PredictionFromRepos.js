@@ -9,7 +9,7 @@ import Badge from "react-bootstrap/Badge";
 import Row from "react-bootstrap/Row";
 import Spinner from "react-bootstrap/Spinner";
 
-import Card from "../../components/Card";
+import RepoCard from "../../components/RepoCard";
 import Pagination from "../../components/Pagination";
 
 import { useServer } from "../../context/server-address";
@@ -242,7 +242,7 @@ const PredictionFromRepos = ({ model, numberOfRepos }) => {
               (page - 1) * REPOS_PER_PAGE + REPOS_PER_PAGE
             )
             .map(({ repoId, ...repoInfo }) => (
-              <Card
+              <RepoCard
                 key={repoId}
                 {...repoInfo}
                 onClick={() => selectRepo(repoId)}
