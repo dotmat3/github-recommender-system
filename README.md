@@ -64,6 +64,15 @@ Moreover, it allows to define a fake user, selecting the repositories that he st
 
 The demo is available at the following link: [https://recommend-hub.netlify.app/](https://recommend-hub.netlify.app/).
 
+### Home page
+
+![home-1](https://user-images.githubusercontent.com/23276420/218273170-347874e1-cf08-499c-9f65-74d290d24831.png)
+![home-2](https://user-images.githubusercontent.com/23276420/218273177-69d76e92-71ca-4834-aba9-ac9487d34699.png)
+
+### Prediction results
+![prediction](https://user-images.githubusercontent.com/23276420/218273181-027d23f0-ca40-4a5f-8f6c-69d97bc83a22.png)
+
+
 ## Technologies
 The system is implemented using the Python language and the following libraries:
 - `pyspark` as the distributed framework
