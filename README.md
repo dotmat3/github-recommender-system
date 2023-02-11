@@ -1,9 +1,12 @@
-# Github Recommender System
+# GitHub Recommender System
 
-The task we addressed in this project is to create a recommender system for GitHub repositories, based on the implicit feedback captured when a user stars a repository.
+Distributed Recommender System for GitHub repositories based on the **implicit feedback** captured when a user stars a repository.
 
-In order to do that, we examined some datasets on Kaggle, but while there are some of them regarding GitHub, we couldn’t find a dataset containing information about user interactions. So, we decided to collect the data ourself, coding a website scraper which could provide us the following data for each repository:
+The system relies on a dataset containing information about **user interactions** on the GitHub website.
+In order to collect it, we started from a well-known repository like React and we stored all the users that **starred** that repo.
+Then, for each user we stored what other repositories he has starred.
 
+In particular, for each **repository** the following data is avalable:
 - Repository name
 - Repository owner
 - Number of stars
@@ -13,17 +16,33 @@ In order to do that, we examined some datasets on Kaggle, but while there are so
 - Sponsor (true/false - some repo have the possibility to open donations)
 - Last update time
 
-Regarding users, instead, collected data about which user starred which repository. So, we thought about starting from a well-known repository like React and store all the users that starred that repo. Then, for each user we stored what other repositories he has starred.
+Regarding **users**, instead, we collected data about which user starred which repository. 
 
-We experimented with the Content-based filtering approach. Then, we tried the Collaborative Filtering approaches, implementing both neighbourhood CF and the Matrix Factorization approach.
+For the recommender system, we experimented with the **Content-based filtering approach** and we tried the Collaborative Filtering approaches, implementing both **Neighbourhood CF** and the **Matrix Factorization** approach.
 
-Finally, in order to evaluate our work, we would use the following metrics: MAP@K and Personalization.
+Finally, in order to evaluate our work, we used the following metrics: **MAP@K** and **Personalization**.
+
+## Contributors
+
+<a href="https://github.com/dotmat3" target="_blank">
+  <img src="https://img.shields.io/badge/Profile-Matteo%20Orsini-green?style=for-the-badge&logo=github&labelColor=blue&color=white">
+</a>
+<br /><br />
+<a href="https://github.com/SkyLionx" target="_blank">
+  <img src="https://img.shields.io/badge/Profile-Fabrizio%20Rossi-green?style=for-the-badge&logo=github&labelColor=blue&color=white">
+</a>
 
 ## Notebook
 
-In this repo is stored the notebook used for the creation and validation of the recommender system, named `GitHub_Recommender_System.ipynb`. In order to run the notebook, Colab is needed since the project is made using the library `pyspark`.
+In this repo is stored the **notebook** used for the creation and validation of the recommender system, named `GitHub_Recommender_System.ipynb`.
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1u32KDUAggSkbH_RGgMAyDF6ysIJ7P8XF)
+In order to run the notebook, Colab is suggested since the project is made using the `pyspark` library.
+
+<a href="https://colab.research.google.com/github/dotmat3/github-recommender-system/blob/main/GitHub_Recommender_System.ipynb" target="_blank">
+<img src="https://img.shields.io/badge/Colab-Open%20Notebook-green?style=for-the-badge&logo=googlecolab&color=blue">
+</a>
+<br/>
+<br/>
 
 ## Results
 
@@ -40,6 +59,18 @@ We can see that as expected the Matrix Factorization model is the best model, ha
 
 ## Demo
 
-Using the notebook as backend we realized a small demo which gives the possibility to inspect the reccomendations for all the users in the dataset. Moreover, it let define a fake user, selecting the repositories that he starred.
+Using the notebook as backend we realized a small **demo** which gives the possibility to inspect the recommendations for all the users in the dataset.
+Moreover, it allows to define a fake user, selecting the repositories that he starred in order to test the system.
 
-The demo is available at the following link, [https://recommend-hub.netlify.app/](https://recommend-hub.netlify.app/).
+The demo is available at the following link: [https://recommend-hub.netlify.app/](https://recommend-hub.netlify.app/).
+
+## Technologies
+The system is implemented using the Python language and the following libraries:
+- `pyspark` as the distributed framework
+- `pandas` to work with data
+- `matplotlib` and `seaborn` to perform the EDA
+
+Moreover, for the Web server the following technologies have been used:
+- `flask` and `ngrok` Python libraries for the back-end
+- `React.js` for the front-end
+
