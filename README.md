@@ -62,7 +62,8 @@ We can see that as expected the Matrix Factorization model is the best model, ha
 Using the notebook as backend we realized a small **demo** which gives the possibility to inspect the recommendations for all the users in the dataset.
 Moreover, it allows to define a fake user, selecting the repositories that he starred in order to test the system.
 
-The demo is available at the following link: [https://recommend-hub.netlify.app/](https://recommend-hub.netlify.app/).
+The **frontend** is available at the following link [https://recommend-hub.netlify.app/](https://recommend-hub.netlify.app/), but unfortunately 
+the **backend** is **not hosted anymore**. However, it is possible to host it yourself directly in Colab, following the instructions provided at the end of the notebook.
 
 ### Home page
 
