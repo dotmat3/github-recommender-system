@@ -1,4 +1,4 @@
-# GitHub Recommender System
+# ⭐ GitHub Recommender System
 
 Distributed Recommender System for GitHub repositories based on the **implicit feedback** captured when a user stars a repository.
 
